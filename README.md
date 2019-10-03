@@ -9,20 +9,42 @@ Fork and clone this repo. On your fork, answer and commit the follow questions. 
 Create an array of strings called `colors` that contain "orange", "red", "yellow", "turquoise", and "lavender".
 
 Then, using array subscripting and string interpolation, print out the String `"orange, yellow, and lavender are some of my favorite colors"`.
-
+```
+let colors: [String] = ["orange", "red", "yellow", "turquoise", "lavender"]
+print( "\(colors[4]) \(colors[2]) \(colors[0]) are some of my favorite colors")
+```
 
 ## Question 2
 
 Remove "Illinois" and "Kansas" from the array below.
 
 `var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]`
+```
+var westernStates: [String] = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]
+var removedCity = westernStates.remove(at: westernStates.count - 2 )
+var removeAnothercity = westernStates.popLast()
 
+print(westernStates)
+```
 
 ## Question 3
 
 Iterate through the array below. For each state, print out the name of the state, a colon, and whether it is or is not **in the continental United States.**
 
 `let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]`
+
+let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]
+
+let contentalState = ["Hawaii", "Alaska"]
+
+for state in moreStates {
+    if contentalState.contains(state){
+        print("\(state): in the continental United States")
+    }else{
+        print("\(state): not an continental United States")
+}
+}
+
 
 
 ## Question 4
